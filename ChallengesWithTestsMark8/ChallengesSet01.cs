@@ -52,7 +52,7 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            if (nameOfPerson == " ")
+            if (nameOfPerson == "")
             {
                 return "Hello!";
             }

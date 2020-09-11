@@ -10,7 +10,7 @@ namespace ChallengesWithTestsMark8
         {
             return Char.IsLetter(c);
 
-         
+
         }
 
         public bool CountOfElementsIsEven(string[] vals)
@@ -22,11 +22,11 @@ namespace ChallengesWithTestsMark8
             }
             else
             {
-                return false; 
+                return false;
             }
-            
-                
-            
+
+
+
             //throw new NotImplementedException();
         }
 
@@ -34,7 +34,7 @@ namespace ChallengesWithTestsMark8
 
         {
             return number % 2 == 0;
-           
+
 
             //throw new NotImplementedException();
         }
@@ -49,20 +49,16 @@ namespace ChallengesWithTestsMark8
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
 
-            
-            
-                if (numbers == null || numbers.Count() == 0)
-                {
-                    return 0;
-                }
-                else
-                {
-                    var min = numbers.Min();
-                    var max = numbers.Max();
-                    return min + max;
-                }
-            
-
+            if (numbers == null || numbers.Count() == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                var min = numbers.Min();
+                var max = numbers.Max();
+                return min + max;
+            }
 
 
             //throw new NotImplementedException();
@@ -70,7 +66,16 @@ namespace ChallengesWithTestsMark8
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+
+
+            if (str1.Length < str2.Length)
+            {
+                return str1.Length;
+            }
+            return str2.Length;
+
+
+            //throw new NotImplementedException();
         }
 
         public int Sum(int[] numbers)
@@ -88,7 +93,7 @@ namespace ChallengesWithTestsMark8
 
                 total += item;
             }
-            return total; 
+            return total;
 
 
             //throw new NotImplementedException();
@@ -96,12 +101,51 @@ namespace ChallengesWithTestsMark8
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            var total = 0;
+
+            if (numbers == null)
+            {
+                return 0;
+            }
+
+
+            foreach (var item in numbers)
+            {
+               if (item % 2 == 0)
+                {
+                    total = item + total;
+                }
+         
+            }
+            return total;
+
+            //throw new NotImplementedException();
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            var total = 0;
+
+            if (numbers == null)
+            {
+                return false;
+            }
+
+
+            foreach (var item in numbers)
+            {       
+                
+             total += item;
+
+            }
+            if (total % 2 == 0 )
+            {
+              return false;
+            }
+            return true;
+            
+
+            //throw new NotImplementedException();
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
@@ -116,13 +160,13 @@ namespace ChallengesWithTestsMark8
         }
 
 
-        
-
- 
 
 
-            
-        
+
+
+
+
+
 
     }
 
