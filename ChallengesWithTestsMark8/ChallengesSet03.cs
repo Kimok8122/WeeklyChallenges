@@ -5,14 +5,50 @@ namespace ChallengesWithTestsMark8
 {
     public class ChallengesSet03
     {
+
+
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            foreach (var item in vals)
+            {
+                if (item == false)
+                {
+                    return true;
+                }
+                
+            }
+            return false;
         }
+
+
+
+
+
+
+
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            if(numbers == null)
+            {
+                return false;
+            }
+
+            var sum = 0;
+
+            foreach (var num in numbers)
+            {
+                if (num % 2 != 0)
+                {
+                    sum += num;
+                }
+
+            }
+            return ((sum % 2) != 0);
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
