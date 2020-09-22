@@ -99,17 +99,49 @@ namespace ChallengesWithTestsMark8
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            int first = nums[0];
+            int last = nums[nums.Length - 1];
+
+            // return nums[nums.Length - 1] - nums[0];
+
+            return last - first; 
         }
 
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            var range = Enumerable.Range(0, 100);
+
+            int[] odds = new int[50];
+
+            var i = 0;
+
+            foreach (var num in range)
+            {         
+                if (num % 2 != 0)
+                {
+                    odds[i] = num;
+                    i++;
+                }
+
+            }
+
+            return odds;
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            
+            for (var i = 0; i < words.Length; i++)
+            {
+                words[i] = words[i].ToUpper();
+                
+            }
         }
     }
 }
