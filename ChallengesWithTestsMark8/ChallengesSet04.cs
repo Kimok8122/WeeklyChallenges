@@ -101,7 +101,19 @@ namespace ChallengesWithTestsMark8
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            int result = 1;
+            while (number != 1)
+            {
+                result = result * number;
+                number = number - 1;
+            }
+            if (result == 0)
+            {
+                return 1;
+            }
+            return result;
         }
     }
 }
