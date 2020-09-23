@@ -69,7 +69,8 @@ namespace ChallengesWithTestsMark8
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return sideLength1 + sideLength2 > sideLength3 && sideLength2 + sideLength3 > sideLength1 && sideLength3 + sideLength1 > sideLength2;
         }
 
         public bool IsStringANumber(string input)
@@ -96,7 +97,32 @@ namespace ChallengesWithTestsMark8
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            if (numbers == null || numbers.Length == 0)
+            {
+                return 0;
+            }
+
+            var count = 0;
+            double sum = 0;
+
+            foreach (var item in numbers)
+            {
+                if (item % 2 == 0)
+                {
+                    count++;
+                    sum += item;
+                }
+            }
+
+            if (sum == 0)
+            {
+                return 0;
+            }
+
+            double answer = sum / count;
+            return answer; 
         }
 
         public int Factorial(int number)
