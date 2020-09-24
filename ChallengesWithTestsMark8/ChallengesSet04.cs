@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -34,23 +36,16 @@ namespace ChallengesWithTestsMark8
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
 
-            
 
-            //string shortString = new string [] [str1, str2, str3, str4];
 
-            //foreach (string name in shortStrings)
-            //{
-            //    if (name.Length < strings.Length)
-            //    {
-            //        strings = name;
-            //    }
-            //}
+            var strings = new int[] { str1.Length, str2.Length, str3.Length, str4.Length };
 
-            //return strings;
+            return strings.Min();
 
-            
+            //return x.Length;
+
         }
 
 
@@ -59,13 +54,29 @@ namespace ChallengesWithTestsMark8
 
         public int GetSmallestNumber(int number1, int number2, int number3, int number4)
         {
-            throw new NotImplementedException();
+            // throw new NotImplementedException();
+
+            var numArray = new int[4] { number1, number2, number3, number4 };
+
+            return numArray.Min();
+           
         }
+
+
+
+
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            biz.Name = "TrueCoders";
         }
+
+
+
+
+
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
@@ -73,12 +84,19 @@ namespace ChallengesWithTestsMark8
             return sideLength1 + sideLength2 > sideLength3 && sideLength2 + sideLength3 > sideLength1 && sideLength3 + sideLength1 > sideLength2;
         }
 
+
+
+
+
         public bool IsStringANumber(string input)
         {
             //throw new NotImplementedException();
             double x;
             return double.TryParse(input, out x);
         }
+
+
+
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
@@ -94,6 +112,11 @@ namespace ChallengesWithTestsMark8
             }
             return count > objs.Length / 2;
         }
+
+
+
+
+
 
         public double AverageEvens(int[] numbers)
         {
@@ -121,14 +144,18 @@ namespace ChallengesWithTestsMark8
                 return 0;
             }
 
-            double answer = sum / count;
-            return answer; 
+            return sum / count;
+            //return answer; 
         }
 
         public int Factorial(int number)
         {
             //throw new NotImplementedException();
 
+            if (number < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             int result = 1;
             while (number != 1)
             {
